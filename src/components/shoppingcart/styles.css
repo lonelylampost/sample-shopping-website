@@ -1,0 +1,327 @@
+:root {
+    --overall-background-color: rgb(255 202 103);
+    --color-overall: #180b06;
+}
+
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: beige;
+    font-weight: 500;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(50%);
+}
+
+
+
+/* Header Element */
+
+
+
+
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#header-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#headerimg {
+    display: flex;
+    margin: 20px;
+}
+
+#logo {
+    cursor: pointer;
+    border: 6px solid sandybrown;
+}
+
+.goog-te-menu-value span {
+    font-size: 10px;
+}
+
+.goog-te-gadget-simple {
+    width: 103px;
+    height: 27px;
+}
+
+.goog-te-gadget-icon {
+    display: none; 
+}
+
+#google_translate_element {
+    margin: 20px 20px 0 20px;
+}
+
+#currency {
+    margin: 10px 20px 20px 20px;
+    text-align: end;
+    font-size: 12px;
+}
+
+#header-container {
+    background-color:var(--overall-background-color);
+    color:var(--color-overall);
+    display: flex;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right:  100px;
+    gap:20px;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+/*Dropdown Menus*/
+
+
+
+
+.dropdown {
+    cursor: pointer;
+    padding: 20px;
+    background-color: inherit;
+}
+
+.dropbtn {
+    background: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 20px -10px;
+    background-color: white;
+  }
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: inherit;
+  }
+
+.dropdown-content a:hover {
+    background-color: var(--overall-background-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover {
+    display: block;
+}
+
+
+
+/* Item List*/
+
+
+
+
+#border {
+    width: 100%;
+    height: 70px;
+}
+
+
+#item-list {
+    border: 4px solid grey;
+    margin: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    margin: 20px;
+    border: 3px solid grey;
+    padding: 18px;
+    gap: 20px;
+}
+
+.item-img {
+    max-width: 170px ;
+}
+
+#checkout {
+    padding: 10px;
+    border: 1px solid grey;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.remove {
+    height: fit-content;
+    padding: 6px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.important {
+    margin-left: auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+.quantity {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 20px;
+}
+
+.math {
+    font-size: 12px;
+}
+
+#info {
+    padding: 20px 24px 10px;
+    margin-left: auto;
+    font-size: 20px;
+}
+
+#bottom {
+    display: flex;
+    justify-content: end;
+    padding: 0 20px 20px;
+}
+
+#empty {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 100px;
+}
+
+#emptycart {
+    width: 70px;
+}
+
+
+
+/* Footer */
+
+
+
+footer {
+    display: flex;
+    color: var(--color-overall);
+    background-color: var(--overall-background-color);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+#left {
+    display: flex;
+    gap: 55px;
+    margin: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+}
+
+#left a {
+    text-decoration: none;
+    color: var(--color-overall);
+    background-color: inherit;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 20px;
+    margin-bottom: 0;
+    background-color: inherit;
+    width: 80%;
+}
+
+#rightright {
+    background: var(--overall-background-color);
+    gap: 5px;
+}
+
+#input {
+    background-color: inherit;
+    font-size: 16px;
+}
+
+#emailsubmit {
+    background: inherit;
+    border: 1px solid ;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+#emailsubmit:hover {
+    background: #180b066e;
+}
+
+input {
+    font-size: 16px;
+    border: 1px solid var(--color-overall);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#footer-cont {
+    display: flex;
+    background-color: inherit;
+}
+
+#footerfooter {
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+    background-color: inherit;
+}
+
+
+.goodbye {
+    display: none;
+}
+
+#main {
+    width: 100%;
+    justify-content: center;
+}
+
+#item-list {
+    width: 100%;
+}
+
+#left a {
+    cursor: pointer;
+}

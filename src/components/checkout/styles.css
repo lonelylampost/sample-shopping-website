@@ -1,0 +1,351 @@
+:root {
+    --overall-background-color: rgb(255 202 103);
+    --color-overall: #180b06;
+}
+
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: beige;
+    font-weight: 500;
+}
+
+input {
+    padding: 5px;
+}
+
+
+
+
+/* Header Element */
+
+
+
+
+
+#header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#header-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#headerimg {
+    display: flex;
+    margin: 20px;
+}
+
+#logo {
+    cursor: pointer;
+    border: 6px solid sandybrown;
+}
+
+.goog-te-menu-value span {
+    font-size: 10px;
+}
+
+.goog-te-gadget-simple {
+    width: 103px;
+    height: 27px;
+}
+
+.goog-te-gadget-icon {
+    display: none; 
+}
+
+#google_translate_element {
+    margin: 20px 20px 0 20px;
+}
+
+#currency {
+    margin: 10px 20px 20px 20px;
+    text-align: end;
+    font-size: 12px;
+}
+
+#header-container {
+    background-color:var(--overall-background-color);
+    color:var(--color-overall);
+    display: flex;
+    justify-content: space-around;
+    margin-right:  100px;
+    margin-left:  100px;
+    gap:20px;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+/*Dropdown Menus*/
+
+
+
+
+.dropdown {
+    cursor: pointer;
+    padding: 20px;
+    background-color: inherit;
+}
+
+.dropbtn {
+    background: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin: 20px -10px;
+    background-color: white;
+  }
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: inherit;
+  }
+
+.dropdown-content a:hover {
+    background-color: var(--overall-background-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content:hover {
+    display: block;
+}
+
+
+
+
+/* Main Body */
+
+
+
+
+
+/* Footer */
+
+
+
+
+footer {
+    display: flex;
+    color: var(--color-overall);
+    background-color: var(--overall-background-color);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+#left {
+    display: flex;
+    gap: 55px;
+    margin: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+}
+
+#left a {
+    text-decoration: none;
+    color: var(--color-overall);
+    background-color: inherit;
+}
+
+#right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 20px;
+    margin-bottom: 0;
+    background-color: inherit;
+    width: 80%;
+}
+
+#rightright {
+    background: var(--overall-background-color);
+    gap: 5px;
+}
+
+#input {
+    background-color: inherit;
+    font-size: 16px;
+}
+
+#emailsubmit {
+    background: inherit;
+    border: 1px solid ;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+#emailsubmit:hover {
+    background: #180b066e;
+}
+
+input {
+    font-size: 16px;
+    border: 1px solid var(--color-overall);
+    border-radius: 8px;
+}
+
+#footer-cont {
+    display: flex;
+    background-color: inherit;
+}
+
+#footerfooter {
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+    background-color: inherit;
+}
+
+
+
+
+
+
+/**/
+
+#title {
+    margin: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.wrapper-progressBar {
+    width: 100%
+}
+
+.progressBar {
+}
+
+.progressBar li {
+    list-style-type: none;
+    float: left;
+    width: 33%;
+    position: relative;
+    text-align: center;
+}
+
+.progressBar li:before {
+    content: " ";
+    line-height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid grey;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    background-color: white
+}
+
+.progressBar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-overall);
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressBar li:first-child:after {
+    content: none;
+}
+
+.progressBar li.active {
+    color: var(--overall-background-color);
+}
+
+.progressBar li.active:before {
+    border-color: var(--overall-background-color);
+    background-color: var(--overall-background-color);
+}
+
+.progressBar .active:after {
+    background-color: var(--overall-background-color);
+}
+
+
+
+
+
+
+.css-m5vj9m-MuiStepper-root {
+    margin: 40px 180px;
+}
+
+#title-spec {
+    margin: 30px;
+    font-size: 30px;
+    text-align: left;
+}
+
+#checkout-btns {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-btn {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.checkout-form {
+    padding: 20px;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    width: fit-content;
+    margin: 20px;
+}
+
+#checkout-sides {
+    display: flex;
+}
+
+#checkout-side-r {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    gap: 10px;
+    width: 400px;
+    height: 300px;
+}
+
+.checkout-finalcost {
+    margin-bottom: 0;
+    margin-top: 1px solid black;
+    padding: 5px;
+}
