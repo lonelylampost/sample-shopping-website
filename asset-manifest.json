@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sample-shopping-website/static/css/main.b77c28d8.css",
-    "main.js": "/sample-shopping-website/static/js/main.b2e748f9.js",
+    "main.js": "/sample-shopping-website/static/js/main.e9dc77ed.js",
     "static/media/cutlery.png": "/sample-shopping-website/static/media/cutlery.af965ee916bc53e871c0.png",
     "static/media/border.png": "/sample-shopping-website/static/media/border.626c8ebeee864b2c70c1.png",
     "index.html": "/sample-shopping-website/index.html",
     "main.b77c28d8.css.map": "/sample-shopping-website/static/css/main.b77c28d8.css.map",
-    "main.b2e748f9.js.map": "/sample-shopping-website/static/js/main.b2e748f9.js.map"
+    "main.e9dc77ed.js.map": "/sample-shopping-website/static/js/main.e9dc77ed.js.map"
   },
   "entrypoints": [
     "static/css/main.b77c28d8.css",
-    "static/js/main.b2e748f9.js"
+    "static/js/main.e9dc77ed.js"
   ]
 }
