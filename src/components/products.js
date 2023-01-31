@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 import products from './productslist'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useContext } from 'react'
-import { selectedFilter, bag } from '../App'
+import { bag } from '../App'
 import { showCart } from './bagcontext'
 
 
-function CreateProducts(props) {
+let CreateProducts = (props) => {
 
     let letShowCart = useContext(showCart)
     const navigate = useNavigate()
     const bagitems = useContext(bag)
     const { selectedFilterHere } = useParams();
     
-    function goToNewProduct(e) {
+    let goToNewProduct = (e) => {
         for(let i = 0; i < products.length; i++) {
             if (e.target.alt === products[i].alt) {
                 bagitems.length = 0
@@ -26,7 +25,7 @@ function CreateProducts(props) {
     }
 
 
-    function GetProducts() {
+    let GetProducts = () => {
         let productsFiltered = []
         function filterer(item) {
             if (item.keywords.includes(selectedFilterHere) === true) {
@@ -34,34 +33,35 @@ function CreateProducts(props) {
             }
         }
 
-    if (selectedFilterHere !== undefined) {
-        products.filter(filterer)
-         if (props.length) {
-             if (productsFiltered.length > props.length) {
-                 productsFiltered.length = props.length
-             }
-         }
+        if (selectedFilterHere !== undefined) {
+            products.filter(filterer)
+            if (props.length) {
+                if (productsFiltered.length > props.length) {
+                    productsFiltered.length = props.length
+                }
+            }
         
-        return  <>
-        {productsFiltered.map((product) => (
-            <li className='product' key={product.id}>
-                <img src={'../img/' + (product.image[0])} alt={product.alt} className='images' id={product.id} onClick={goToNewProduct} />
-                <div className='name'>{product.name}</div>
-                <div className='price'>{product.price}</div>
-            </li>
-        ))}
-        </>
-    } else {
-        return  <>
-        {products.map((product) => (
-            <li className='product' key={product.id}>
-                <img src={'./img/' + (product.image[0])} alt={product.alt} className='images' id={product.id} onClick={goToNewProduct} />
-                <div className='name'>{product.name}</div>
-                <div className='price'>{product.price}</div>
-            </li>
-        ))}
-        </>
-    }}
+            return  <>
+            {productsFiltered.map((product) => (
+                <li className='product' key={product.id}>
+                    <img src={'../img/' + (product.image[0])} alt={product.alt} className='images' id={product.id} onClick={goToNewProduct} />
+                    <div className='name'>{product.name}</div>
+                    <div className='price'>{product.price}</div>
+                </li>
+                ))}
+            </>
+
+        } else {
+            return  <>
+            {products.map((product) => (
+                <li className='product' key={product.id}>
+                    <img src={'./img/' + (product.image[0])} alt={product.alt} className='images' id={product.id} onClick={goToNewProduct} />
+                    <div className='name'>{product.name}</div>
+                    <div className='price'>{product.price}</div>
+                </li>
+                ))}
+            </>
+        }}
 
 
 

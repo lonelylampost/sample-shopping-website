@@ -1,5 +1,4 @@
-import React, {useContext, useEffect} from 'react'
-import ReactDOM from 'react-dom'
+import React, {useContext, useEffect, useState} from 'react'
 import './styles.css'
 import { cart } from '../bagcontext'
 import { CreateProducts } from '../products'
@@ -8,29 +7,28 @@ import { bag } from '../../App'
 import border from '../img/border.png'
 
 
-function ProductSearch() {
+let ProductSearch = () => {
     const navigate = useNavigate()
-
     let selectedProduct = useContext(bag)
     selectedProduct.length = 0
-
     let cartItems = useContext(cart) 
+    let [bagDisplay, setBagDisplay] = useState('none') 
     
-    useEffect(() => {
-        if (cartItems.length > 0) {
-            document.getElementById('bag-counter').style.display = 'block'
-        }
-    });
-
-    function goToBag() {
+    let goToBag = () => {
         navigate('/shopping-cart')
     }
 
+    useEffect(() => {
+        if (cartItems.length > 0) {
+            setBagDisplay('block')
+        }
+    });
+
     return  <>
-                <div id="bag-counter">!</div>
-                <img id="bag-popup" src="../img/shoppingcart.svg" onClick={goToBag}/>
+                <div id="bag-counter" style={{display: bagDisplay}}>{cartItems.length}</div>
+                <img id="bag-popup" src="../img/shoppingcart.svg" alt="shopping-cart"onClick={goToBag}/>
                 <div id="top">
-                    <img id="title-img" src={border} alt='border image'/>
+                    <img id="title-img" src={border} alt='border'/>
                     <div id="main-title" className="title"></div>
                 </div>
                 <div id="main">

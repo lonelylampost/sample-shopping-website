@@ -1,30 +1,28 @@
 import React, { useEffect } from 'react'
-import ReactDOM from 'react-dom'
 import logo from './img/logo.png'
 import { useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react'
-import { selectedFilter } from '../App'
+import { useState } from 'react'
 
 
 
-function Header() {
+let Header = () => {
 
   const navigate = useNavigate();
   const [selectedFilterHere, setSelectedFilterHere] = useState('')
 
-  function toSearchPage(e) {
+  let toSearchPage = (e) => {
     setSelectedFilterHere(e.target.name)
   }
 
-  function toHomepage(event) {
+  let toHomepage = (event) => {
     navigate('./homepage');
   }
 
-useEffect(() => {
-  if(selectedFilterHere !== '') {
-    navigate(`./search/${selectedFilterHere}`)
-  }
-}, [selectedFilterHere])
+  useEffect(() => {
+    if(selectedFilterHere !== '') {
+      navigate(`./search/${selectedFilterHere}`)
+    }
+  }, [selectedFilterHere])
 
 
     return  <div id="header">

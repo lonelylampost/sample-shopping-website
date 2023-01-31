@@ -1,13 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { useNavigate } from 'react-router-dom';
 
 
-function Footer() {
+let Footer = () => {
 
     const navigate = useNavigate();
 
-    function goToFAQ() {
+    let goToFAQ = () => {
         navigate('/faq')
     }
 
@@ -31,8 +30,8 @@ function Footer() {
             </footer>
 }
 
-function submitEmail() {
-    if (document.getElementById('foremailsubmit').value != "") {
+let submitEmail = () => {
+    if (document.getElementById('foremailsubmit').value !== "") {
         document.getElementById('foremailsubmit').textContent = ''
         document.getElementById('input').textContent = 'Thank you!'
     }

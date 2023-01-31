@@ -1,23 +1,23 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './styles.css'
 import border from '../img/border.png'
+
 import { useNavigate } from 'react-router-dom';
 import { cart } from '../bagcontext'
-import {useContext, useEffect} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import { bag } from '../../App'
 
 function FAQ() {
 
     const navigate = useNavigate()
-
     let selectedProduct = useContext(bag)
     selectedProduct.length = 0
-
     let cartItems = useContext(cart) 
+    let [bagDisplay, setBagDisplay] = useState('none') 
+
     useEffect(() => {
         if (cartItems.length > 0) {
-            document.getElementById('bag-counter').style.display = 'block'
+            setBagDisplay('block')
         }
     });
 
@@ -25,11 +25,9 @@ function FAQ() {
         navigate('/shopping-cart')
     }
 
-
-
     return  <>
-                <div id="bag-counter">!</div>
-                <img id="bag-popup" src="./img/shoppingcart.svg" onClick={goToBag}/>
+                <div id="bag-counter" style={{display: bagDisplay}}>{cartItems.length}</div>
+                <img id="bag-popup" src="./img/shoppingcart.svg" alt="shopping-cart" onClick={goToBag}/>
                 <img id="border" src={border} alt="border" />
                 <div id='main-body'>
                     <div className="big">FORK & Co Company Policies</div>
